@@ -32,7 +32,16 @@
             <section class="section hero">   
                      <div class="container">
                         <h1 class="hero-h1">Effective Solutions   for Your Business</h1>
-                    <button class="button" type="button" >Order Service</button>
+                    <button class="button"  type="button" data-modal-open >Order Service</button>
+                     </div>
+                     <div class="backdrop is-hidden " data-modal>
+                        <div class="modal">
+                        <button class="button-hero" data-modal-close type="button">
+                            <svg class="svg-hero" width="8" height="8">
+                                <path class="close" d="M8 0.805714L7.19429 0L4 3.19429L0.805714 0L0 0.805714L3.19429 4L0 7.19429L0.805714 8L4 4.80571L7.19429 8L8 7.19429L4.80571 4L8 0.805714Z" fill="black"/>
+                                </svg>
+                                </button>
+                        </div>
                      </div>
                </section>
             
@@ -380,6 +389,7 @@
         </div>
     </div>
 </footer>
+<script src="./js/modal.js"></script>
 </body>
 
 </html>
