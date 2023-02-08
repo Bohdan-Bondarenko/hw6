@@ -123,7 +123,7 @@ color: #2E2F42;
 .menu-link{
 position: relative;
 padding-top: 24px;
-padding-bottom: 24px;
+padding-bottom: 28px;
 font-weight: 500;
 font-size: 16px;
 line-height: 1.5;
@@ -166,10 +166,6 @@ font-size: 16px;
 line-height: 1.5;
 letter-spacing: 0.02em;
 color: #434455;
-width: 153px;
-height: 24px;
-left: 940px;
-top: 24px;
 transition-property: color;
     transition-duration: 250ms;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
@@ -257,8 +253,8 @@ transition-property: background-color;
     position: fixed;
     top: 0; 
     left: 0;
-    bottom: 0;
-    right: 0;
+    width: 100%;
+    height: 100%;
     background-color: rgba(46, 47, 66, 0.4);
     opacity: 1;
     transition: opacity 250ms cubic-bezier(0.4, 0, 0.2 , 1 );
@@ -269,8 +265,9 @@ transition-property: background-color;
 }
 .modal{
     position: absolute;
-    left: 516px;
-    top: 88px;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%)  ;
    
     
     min-width: 408px;
@@ -284,7 +281,7 @@ border-radius: 4px;
     display: flex;
     justify-content: center;
     align-items: center;
-    fill: black;
+    color:#000;
     background-color: #E7E9FC;
 border: 1px solid rgba(0, 0, 0, 0.1);
 border-radius: 50%;
@@ -293,26 +290,24 @@ cursor: pointer;
 position: absolute;
 width: 24px;
 height: 24px;
-left: 360px;
+right: 24px;
 top: 24px;
 
-transition-property: background-color;
+transition-property: background-color,color;
     transition-duration: 250ms;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 
 }
 .button-hero:hover{
     background-color: var(--pressed-state-clr);
+    color: #FFFFFF;
 }
 .svg-hero{
     position: absolute;
-left: 33.33%;
-right: 33.33%;
-top: 33.33%;
-bottom: 33.33%;
+
 }
 .close{
-    fill: black;
+    fill:currentColor;
 transition-property: fill;
 transition-duration: 250ms;
 transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);}
@@ -514,22 +509,24 @@ margin-bottom: 72px;
     display: flex;
     justify-content: center;
     align-items: center;
-    border: 1px solid var(--subtle-text-clr) ;
+    border: 1px solid currentColor;
     border-radius: 4px;
-    fill: var(--subtle-text-clr);
+    color: var(--subtle-text-clr);
     width: 100%;
     height: 100%;
     cursor: pointer;
 
-    transition-property: border,fill;
+    transition-property: color;
     transition-duration: 250ms;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
     
 }
 .business-link:hover,
 .business-link:focus{
-    border: 1px solid var(--pressed-state-clr) ;
-    fill: var(--pressed-state-clr);
+    color: var(--pressed-state-clr);
+}
+.customers-svg{
+    fill: currentColor;
 }
 /* footer */
 
@@ -637,7 +634,7 @@ padding: 12px 24px;
 border: 1px solid var(--accent-clr);
 border-radius: 4px;
 
-transition-property: background-color,color;
+transition-property: background-color,color,box-shadow;
     transition-duration: 250ms;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -696,8 +693,10 @@ top: 40px;
     padding-top: 32px;
     padding-bottom: 32px;
     padding-left: 16px;
-    width: 360px;
-   
+    border:0.5px solid var(--accent-clr);
+    border-top: none;
+    
+    
 
     
 }
@@ -722,9 +721,9 @@ letter-spacing: 0.02em;
     margin-bottom: 48px;
 
     overflow: hidden;
+   
+    
 
-    border: 1px solid #E7E9FC;
-box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08);
     
 }
 .portfolio-item:nth-child(3){
@@ -739,14 +738,16 @@ box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08);
 .portfolio-item:nth-last-child(-n + 3){
     margin-bottom: 0px;
 }
-.portfoli-link{
+.portfolio-link{
+    display: block;
     cursor: pointer;
     width: 100%;
     height: 100%;
-    display: block;
+    box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08);
     border:0.5px solid var(--accent-clr);
-    box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08); 
-}.portfoli-link:hover{
-    border:1px solid var(--light-clr);
-box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
 }
+.portfolio-link:hover{
+    box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
+    border:1px solid var(--light-clr);
+} 
+
