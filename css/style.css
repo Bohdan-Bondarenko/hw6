@@ -771,7 +771,7 @@ letter-spacing: 0.02em;
     margin-bottom: 0px;
 }
 .portfolio-link{
-    display: block;link
+    display: block;
     box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08);
     transition-property: box-shadow;
     transition-duration: 250ms;
