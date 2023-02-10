@@ -172,9 +172,10 @@ transition-property: color;
 }
 .mail:hover{
 color: var(--primari-brand-clr);
-transition-property: color;
-    transition-duration: 250ms;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+}
+.mail:focus{
+    color: var(--primari-brand-clr);
 }
 .mail:active{
     color: var(--primari-brand-clr);
@@ -196,6 +197,9 @@ transition-property: color;
 .phone-number:hover{
     color: var(--primari-brand-clr);
     
+}
+.phone-number:focus{
+    color: var(--primari-brand-clr);
 }
 .phone-number:active{
     color: var(--primari-brand-clr);
@@ -249,6 +253,9 @@ transition-property: background-color;
 .button:hover{
     background-color: #404BBF;
 }
+.button:focus{
+    background-color: #404BBF;
+}
 .backdrop{
     position: fixed;
     top: 0; 
@@ -299,6 +306,10 @@ transition-property: background-color,color;
 
 }
 .button-hero:hover{
+    background-color: var(--pressed-state-clr);
+    color: #FFFFFF;
+}
+.button-hero:focus{
     background-color: var(--pressed-state-clr);
     color: #FFFFFF;
 }
@@ -461,6 +472,10 @@ letter-spacing: 0.02em;
     .link-social:hover{
         background-color: var(--pressed-state-clr);
     }
+    .link-social:focus{
+        background-color: var(--pressed-state-clr);
+    }
+
     .size-svg{
         width: 16px;
         height: 16px;
@@ -574,15 +589,12 @@ margin-bottom: 16px;
         border-radius: 50%;
         width: 40px;
         height: 40px;
-        background-image:linear-gradient(to right,
-        rgba(255, 255, 255, 0.1),
-         rgba(255, 255, 255, 0.1) 
-    );
-    transition-property: background-color;
-    transition-duration: 250ms;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+        
 }
-.social-li-footer:hover{
+.footer-link-social:hover{
+    background-color:var(--success-clr);
+}
+.footer-link-social:focus{
     background-color:var(--success-clr);
 }
 .social-footer{
@@ -605,6 +617,16 @@ margin-bottom: 16px;
     justify-content: center;
     width: 100%;
     height: 100%;
+
+    border-radius: 50%;
+    background-image:linear-gradient(to right,
+    rgba(255, 255, 255, 0.1),
+     rgba(255, 255, 255, 0.1) 
+);
+transition-property: background-color;
+transition-duration: 250ms;
+transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
 }
 /* -------------------------------- */
 /* -------------------------------- */
@@ -643,6 +665,11 @@ transition-property: background-color,color,box-shadow;
     color: var(--body-background-clr);
     box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 2px 1px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
 }
+.button-portfolio:focus{
+    background-color: #4D5AE5;
+    color: var(--body-background-clr);
+    box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 2px 1px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
+}
 .visually-hidden {
     position: absolute;
     width: 1px;
@@ -666,10 +693,15 @@ transition-property: background-color,color,box-shadow;
     overflow: hidden;
     
 }
-.portfolio-item:hover .overlay {
+.portfolio-link:hover .overlay {
     transform: translatey(0);
     background-blend-mode: soft-light;
-mix-blend-mode: normal;
+    mix-blend-mode: normal;
+  }
+  .portfolio-link:focus .overlay {
+    transform: translatey(0);
+    background-blend-mode: soft-light;
+    mix-blend-mode: normal;
   }
 .overlay {
     position: absolute;
@@ -694,7 +726,7 @@ top: 40px;
     padding-bottom: 32px;
     padding-left: 16px;
     border:0.5px solid var(--accent-clr);
-    border-top: none;
+    border-top: 0;
     
     
 
@@ -720,12 +752,9 @@ letter-spacing: 0.02em;
     margin-right: 24px;
     margin-bottom: 48px;
 
-    overflow: hidden;
+    
    
-    box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08);
-    transition-property: box-shadow;
-    transition-duration: 250ms;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+   
 
     
 }
@@ -742,16 +771,17 @@ letter-spacing: 0.02em;
     margin-bottom: 0px;
 }
 .portfolio-link{
-    display: block;
-    cursor: pointer;
-    width: 100%;
-    height: 100%;
-    
-    border:0.5px solid var(--accent-clr);
+    display: block;link
+    box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08);
+    transition-property: box-shadow;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+   
 
     
 }
-.portfolio-item:hover{
+.portfolio-link:hover,
+.portfolio-link:focus{
     box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
     
 } 
