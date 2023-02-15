@@ -270,12 +270,13 @@ transition-property: background-color;
     opacity: 0;
     pointer-events: none;
 }
+/* modal */
 .modal{
     position: absolute;
     left: 50%;
     top: 50%;
     transform: translate(-50%,-50%)  ;
-   
+    padding: 24px;
     
     min-width: 408px;
     min-height: 576px;
@@ -284,6 +285,151 @@ transition-property: background-color;
     box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 2px 1px rgba(0, 0, 0, 0.2);
 border-radius: 4px;
 }
+.modal-title{
+    display: block;
+    font-weight: 500;
+font-size: 16px;
+line-height: 1.5;
+text-align: center;
+letter-spacing: 0.02em;
+color: #2E2F42;
+margin-bottom: 16px;
+text-align: center;
+margin-top: 48px;
+}
+
+.form-field {position: relative;
+    margin-bottom: 8px;
+    text-align: left;
+}
+.form-label {
+    display: block;
+    margin-bottom: 4px;
+    font-weight: 400;
+font-size: 12px;
+line-height: 1.333;
+letter-spacing: 0.04em;
+color: #8E8F99;
+}
+.svg-form{
+    position: absolute;
+    left: 4.44%;
+right: 89.44%;
+top: 44.83%;
+bottom: 13.79%;
+
+pointer-events: none;
+}
+.form-input {
+    position: relative;
+    display: block;
+    width: 100%;
+    padding-left: 38px;
+    height: 40px;
+    border: 1px solid rgba(33, 33, 33, 0.2);
+border-radius: 4px;
+transition-property: border-color;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    outline: none;
+}
+.form-input:hover,
+.for-message:hover
+{
+    border-color: var(--primari-brand-clr);
+    
+}
+.form-input:focus,
+.for-message:focus
+{
+    border-color: var(--primari-brand-clr);
+    
+}
+.svg-form{
+    display: block;
+    fill: var(--main-txt-clr);
+    transition-property: fill;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+.form-input:hover ~ .svg-form,
+.form-input:focus ~ .svg-form
+{
+   fill: var(--primari-brand-clr);
+}
+.for-message{
+    display: block;
+    width: 100%;
+    height: 120px;
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    border-radius: 4px;
+    transition-property: border-color;
+        transition-duration: 250ms;
+        transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    resize: none;
+    outline: none;
+    }
+    
+    .order-form-agree{
+        display: flex;
+        align-items: center;
+        
+        gap: 8px;
+    }
+    .order-form-checkbox{
+        appearance: none;
+        width: 16px;
+        height: 16px;
+        border: 1.25px solid var(--hero-background-clr);
+border-radius: 2px;
+background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'%3E%3C!--! Font Awesome Pro 6.3.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --%3E%3Cpath d='M470.6 105.4c12.5 12.5 12.5 32.8 0 45.3l-256 256c-12.5 12.5-32.8 12.5-45.3 0l-128-128c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L192 338.7 425.4 105.4c12.5-12.5 32.8-12.5 45.3 0z' fill='%23fff'/%3E%3C/svg%3E");
+background-repeat: no-repeat;
+background-position: center;
+background-size: 10px;
+transition-property: background-color,border-color;
+transition-duration: 250ms;
+transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+.order-form-checkbox:checked{
+   background-color: var(--pressed-state-clr);
+   border-color: var(--pressed-state-clr);
+}
+.order-form-desc{
+font-weight: 400;
+font-size: 12px;
+line-height: 1.33;
+letter-spacing: 0.04em;
+color: #757575;
+}
+.order-form-link{
+    color: var(--primari-brand-clr);
+   text-decoration: underline;
+   text-underline-offset:2px;
+}
+.button-send{
+position: absolute;
+width: 169px;
+left: 119px;
+right: 120px;
+bottom: 24px;
+font-family: inherit;
+background-color: #4D5AE5;
+cursor: pointer;
+color: #FFFFFF;
+font-weight: 500;
+font-size: 16px;
+line-height: 1.5;
+letter-spacing: 0.04em;
+border: none;
+border-radius: 4px;
+padding: 16px 32px;
+transition-property: background-color;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    .button-send:hover{
+        background-color: var(--pressed-state-clr);
+    }
 .button-hero{
     display: flex;
     justify-content: center;
@@ -305,6 +451,7 @@ transition-property: background-color,color;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 
 }
+
 .button-hero:hover{
     background-color: var(--pressed-state-clr);
     color: #FFFFFF;
@@ -607,6 +754,7 @@ margin-bottom: 16px;
 .footer-second-div{ 
     width: 208px;
     height: 80px;
+    margin-right: 80px;
 }
 .full-div{
     display: flex;
@@ -626,7 +774,55 @@ margin-bottom: 16px;
 transition-property: background-color;
 transition-duration: 250ms;
 transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+.form-footer{
+    display: flex;
+    align-items: center;
+}
+.footer-form-field{
+    border: 1px solid rgba(255, 255, 255, 0.3);
+filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+border-radius: 4px;
 
+}
+.footer-form-field input{
+    width: 264px;
+height: 40px;
+padding-top: 8px;
+padding-bottom: 8px;
+padding-left: 16px;
+}
+.footer-form-field input::placeholder{
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 2;
+}
+.subscribe{
+    font-family: inherit;
+    background-color: #4D5AE5;
+    cursor: pointer;
+    color: #FFFFFF;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.04em;
+    border: none;
+    border-radius: 4px;
+   
+    display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+padding: 8px 24px;
+gap: 16px;
+    transition-property: background-color;
+        transition-duration: 250ms;
+        transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+margin-left: 24px;
+    }
+.subscribe:hover,
+.subscribe:focus{
+    background-color: #404BBF;
 }
 /* -------------------------------- */
 /* -------------------------------- */
