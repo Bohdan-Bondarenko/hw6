@@ -780,9 +780,11 @@ transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
     align-items: center;
 }
 .footer-form-field{
-    border: 1px solid rgba(255, 255, 255, 0.3);
+    border:  solid rgba(255, 255, 255, 0.3);
 filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
 border-radius: 4px;
+border-color: var(--hero-background-clr);
+
 
 }
 .footer-form-field input{
@@ -796,6 +798,9 @@ padding-left: 16px;
     font-weight: 400;
     font-size: 12px;
     line-height: 2;
+}
+.form-input-footer{
+    background-color: var(--hero-background-clr);
 }
 .subscribe{
     font-family: inherit;
